@@ -1,4 +1,4 @@
-import type { IAdmin, INote, INoteBook, IUser, UserData } from "./interface.js";
+import type { IAdmin, INote, INoteBook, IUser, IUserData } from "./interface.js";
 /***********************************************************************************************/
 
 export class User implements IUser {
@@ -20,7 +20,7 @@ export class User implements IUser {
     public get password(): string {
         return `#####${this._password}`
     }
-    displayInfo(): UserData {
+    displayInfo(): IUserData {
         return {
             id: this.id,
             name: this.name,

@@ -1,6 +1,6 @@
 import type { Note, NoteBook, User } from "./main.js";
 
-export interface UserData {
+export interface IUserData {
     id: number;
     name: string;
     email: string;
@@ -8,8 +8,8 @@ export interface UserData {
     phone: string;
     age: number;
 }
-export interface IUser extends UserData {
-    displayInfo(): UserData
+export interface IUser extends IUserData {
+    displayInfo(): IUserData
     addNoteBook(noteBook: NoteBook): void
 }
 export interface IAdmin extends IUser {
